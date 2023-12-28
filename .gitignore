@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+cx_Oracle-doc
+lib
+Scripts
+*.cfg
+*.qrc
+*.spec
