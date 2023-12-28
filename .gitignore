@@ -8,3 +8,4 @@ Scripts
 *.zip
 *.ui
 config.ini
+__pycache__

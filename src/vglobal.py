@@ -1,0 +1,1 @@
+tvisibilite_senha = False

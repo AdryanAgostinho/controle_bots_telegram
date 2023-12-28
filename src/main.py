@@ -9,9 +9,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import vglobal
 
 class Ui_MainWindow(object):
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(600, 600)
@@ -132,7 +133,7 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:hover{\n"
 "background-color: rgb(252, 200, 8);\n"
-"border: 1px solid rgb(253, 300, 7);\n"
+"border: 1px solid rgb(210, 100, 7);\n"
 "color: white;\n"
 "}")
         self.bt_login.setObjectName("bt_login")
@@ -164,6 +165,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        self.progressBar.setVisible(False)
+        self.var_checklogin.setVisible(False)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Login Controle v1"))
@@ -171,12 +175,39 @@ class Ui_MainWindow(object):
         self.line_senha.setPlaceholderText(_translate("MainWindow", "  MinhaSenha"))
         self.label_3.setText(_translate("MainWindow", "Senha:"))
         self.label_2.setText(_translate("MainWindow", "Login:"))
-        self.line_login.setPlaceholderText(_translate("MainWindow", "Usuario.Login"))
+        self.line_login.setPlaceholderText(_translate("MainWindow", "  Usuario.Login"))
         self.bt_login.setText(_translate("MainWindow", "Login"))
-import fundo_rc
-import icone_login_rc
-import soui_rc
-import versenha_rc
+        ######variaveis da tela
+        
+####### INICIANDO AS FUNÇÕES DA ROTINA
+        self.bt_versenha.clicked.connect(self.versenha)
+
+
+    def versenha(self):
+      
+      if vglobal.tvisibilite_senha:
+         self.bt_versenha.setStyleSheet("QPushButton#bt_versenha{\n"
+"background-color: none;\n"
+"border: none;\n"
+"background-image: url(:/versenha/eye_visibilit_on.png);\n"
+"padding-bottom: 14px;\n"
+"}")
+         vglobal.tvisibilite_senha = False
+         self.line_senha.setEchoMode(QtWidgets.QLineEdit.Password)
+      else:
+        self.bt_versenha.setStyleSheet("QPushButton#bt_versenha{\n"
+"background-color: none;\n"
+"border: none;\n"
+"background-image: url(:/versenha/eye_visibilit_off.png);\n"
+"padding-bottom: 14px;\n"
+"}")
+        vglobal.tvisibilite_senha = True
+        self.line_senha.setEchoMode(QtWidgets.QLineEdit.Normal)
+        
+import IMAGENS_DEV_ENERGY.fundo
+import IMAGENS_DEV_ENERGY.icone_login
+import IMAGENS_DEV_ENERGY.soui
+import IMAGENS_DEV_ENERGY.versenha
 
 
 if __name__ == "__main__":
