@@ -7,3 +7,4 @@ Scripts
 *.spec
 *.zip
 *.ui
+config.ini
