@@ -27,7 +27,5 @@ class conexao():
 
     @staticmethod
     def conectarbot():
-        #db = conexao =  sqlite3.connect(r'\\192.168.100.150\banco\bot_monitoramento.db')
-        #db = conexao =  sqlite3.connect(r'../bd/bot_monitoramento.db')
-        db = conexao =  sqlite3.connect(r'..\bd\bot_monitoramento.db')
+        db = conexao =  sqlite3.connect(r'bd\bot_monitoramento.db')
         return db
