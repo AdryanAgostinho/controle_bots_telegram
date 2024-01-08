@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="buscar">
+    <file>salvar.svg</file>
+    <file>voltar.svg</file>
+    <file>buscar.svg</file>
+    <file>cadastrar.svg</file>
+    <file>editar.svg</file>
+  </qresource>
+</RCC>

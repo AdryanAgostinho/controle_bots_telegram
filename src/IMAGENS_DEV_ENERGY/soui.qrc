@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="soui">
+    <file>soui.qrc</file>
+    <file>sou.png</file>
+  </qresource>
+</RCC>
