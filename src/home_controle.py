@@ -14,6 +14,7 @@ import sys
 from bd import bd
 from user_tele import Ui_Form_user_tele
 from user_tele_cad import Ui_Form_user_tele_cad
+from funcoes_tele import Ui_Form_funcoes_tele
 
 class Ui_fundo(object):
     def setupUi(self, fundo):
